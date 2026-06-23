@@ -7,11 +7,7 @@ function ListaEspera() {
 
   const [usuario, setUsuario] = useState("")
   return (
-    <section className="ListaEspera">
-
-      <div className="blur blur-1"></div>
-      <div className="blur blur-2"></div>
-      <div className="blur blur-3"></div>
+    <div className="ListaEspera">
 
       <div className="card">
 
@@ -136,7 +132,7 @@ function ListaEspera() {
 
       </div>
 
-    </section>
+    </div>
   );
 }
 
