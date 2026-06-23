@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "Gabarito";
   src: url("./assets/fonts/Gabarito-VariableFont_wght.ttf") format("truetype");
@@ -14,6 +13,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 html {
   font-size: 90%;
   box-sizing: border-box;
@@ -41,10 +41,112 @@ body {
 }
 
 
-html, body {
-margin: 0;
-padding: 0;
-height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
-:root { --bg:#ffffff; --tb-h: 80px; --radius: 8px; --card:#152530; --gris: gray; --muted:rgb(95, 109, 141); --txt:#1d232f; --txt2: #48525E; --hover:rgba(25, 48, 63, 0.986); --ok:#18a34a; --bad:#dc2626; --accent:#3b82f6; --muted2: #d5e4f88e; --error: rgb(275,75,75) }
+:root {
+  --bg: #ffffff;
+  --tb-h: 80px;
+  --radius: 8px;
+  --card: #152530;
+  --gris: gray;
+  --muted: rgb(95, 109, 141);
+  --txt: #1d232f;
+  --txt2: #48525E;
+  --hover: rgba(25, 48, 63, 0.986);
+  --ok: #18a34a;
+  --bad: #dc2626;
+  --accent: #3b82f6;
+  --muted2: #d5e4f88e;
+  --error: rgb(275, 75, 75)
+}
+
+.loader-card {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--card);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader-white {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+
+@keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
+@keyframes rotation {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+} 
+
+@keyframes hitZak {
+0% {
+  left: 0;
+  transform: translateX(-1%);
+}
+100% {
+  left: 100%;
+  transform: translateX(-99%);
+}
+}
+  
+
+@keyframes rotation-2 {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+} 
+
+/* Animaciones */
+
+
+@keyframes modalScaleIn {
+0% {
+  transform: translate(-50%, -50%) scale(0.5);
+  opacity: 0;
+}
+100% {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+}
+@keyframes modalScaleIn2 {
+0% {
+  transform: scale(0.5);
+  opacity: 0;
+}
+100% {
+  transform: scale(1);
+  opacity: 1;
+}
+}

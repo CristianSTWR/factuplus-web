@@ -1,0 +1,59 @@
+/*  */
+
+.toast {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    min-width: 280px;
+    max-width: 400px;
+    padding: 14px 30px 14px 18px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #fff;
+    z-index: 99999999;
+    animation: slideIn 0.35s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    font-family: "Gabarito", system-ui, -apple-system, Segoe UI, sans-serif;
+  }
+  
+  /* ÉXITO */
+  .toast-success {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+  }
+  
+  .toast {
+    display: flex;
+    align-items: center;   /* 👈 centra verticalmente */
+    gap: 10px;
+  }
+  
+  .toast-icon {
+    display: flex;         /* 👈 evita desalineo interno */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .toast span {
+    display: flex;         /* 👈 centra el texto con el icono */
+    align-items: center;
+    line-height: 1.2;      /* 👈 evita que el texto se baje */
+  }
+  
+  /* ERROR */
+  .toast-error {
+    background: linear-gradient(135deg, #ef4444, #b91c1c);
+  }
+  
+  /* Animación */
+@keyframes slideIn {
+    from {
+      transform: translateX(120%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  

@@ -78,8 +78,133 @@
     background-color: var(--card);
     color: white;
     padding: .8rem;
+    cursor: pointer;
   }
 
+  .registro-exitoso {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+  
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px);
+  
+    border: 1px solid rgba(255,255,255,.3);
+  
+    animation: aparecer .6s ease forwards;
+  }
+  
+  .registro-exitoso h2 {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  
+    color: var(--card);
+    font-size: 1.8rem;
+  }
+  
+  .registro-exitoso p {
+    color: gray;
+    line-height: 1.6;
+  }
+  
+  .beneficios {
+    display: flex;
+    gap: .75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    margin-top: 1.5rem;
+  }
+  
+  .beneficios div {
+    padding: .7rem 1rem;
+  
+    background: var(--muted2);
+    color: var(--card);
+  
+    border-radius: 999rem;
+  
+    font-size: .9rem;
+    font-weight: 600;
+  
+    animation: subir .5s ease forwards;
+  }
+  
+  .registro-exitoso small {
+    display: block;
+    margin-top: 1.5rem;
+    color: gray;
+  }
+  
+  .check-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .check-icon {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .check-circle {
+    stroke: #22c55e;
+    stroke-width: 3;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: dibujarCirculo .8s ease forwards;
+  }
+  
+  .check-path {
+    stroke: #22c55e;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+  
+    animation: dibujarCheck .5s ease forwards;
+    animation-delay: .7s;
+  }
+  
+  @keyframes dibujarCirculo {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dibujarCheck {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(25px) scale(.95);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  @keyframes subir {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
   @media (max-width: 768px) {
     .ListaEspera {
       width: 100%;
