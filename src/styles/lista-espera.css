@@ -1,7 +1,7 @@
 
 .card{
     width:100%;
-    max-width: 38rem;
+    max-width: 36rem;
     border-radius:35px;
     padding:20px 60px 60px 60px;
     text-align:center;
@@ -89,10 +89,16 @@
 
     .card{
         margin-top: 0;
+        padding: 0;
         border-radius: 0;
         box-shadow: none;
         padding-left: 1.4rem;
         padding-right: 1.4rem;
+    }
+
+    .logo{
+        width:80px;
+        
     }
   
   }
