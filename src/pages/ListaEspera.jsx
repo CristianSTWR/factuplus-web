@@ -52,7 +52,7 @@ function ListaEspera() {
     try {
 
       const response = await fetch(
-        "http://localhost:8000/lista-espera",
+        "https://api.factuplus.com.do/lista-espera",
         {
           method: "POST",
           headers: {
